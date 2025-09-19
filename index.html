@@ -467,5 +467,35 @@
       });
     }
   </script>
+  <script>
+  // Backend URLs
+  const NODE_BACKEND = "https://nodejs-4-grgb.onrender.com";
+  const PY_BACKEND = "https://career-recommender-1.onrender.com";
+
+  // Example: Fetch health check from Node backend
+  fetch(`${NODE_BACKEND}/`)
+    .then(res => res.json())
+    .then(data => {
+      console.log("Node backend:", data);
+    })
+    .catch(err => console.error("Node backend error:", err));
+
+  // Example: Fetch careers from Python backend
+  fetch(`${PY_BACKEND}/careers`)
+    .then(res => res.json())
+    .then(data => {
+      console.log("Python backend careers:", data);
+      // render careers dynamically in dashboard
+      const careersList = document.createElement("ul");
+      data.careers.forEach(career => {
+        const li = document.createElement("li");
+        li.textContent = career;
+        careersList.appendChild(li);
+      });
+      document.querySelector("#dashboard .dash-main").appendChild(careersList);
+    })
+    .catch(err => console.error("Python backend error:", err));
+</script>
+
 </body>
 </html>
