@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Career & Education Advisor — Personalized Pathways</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Hk8m3e..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== Header / Navigation ========== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">
+        <img src="https://i.ibb.co/7L2LTK3/logo.png" alt="Career & Education Advisor logo" />
+        <span class="brand-text">Career & Education Advisor</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#contact">Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-ctas">
+        <a href="#signup" class="btn primary">Get Started</a>
+        <button class="btn ghost mobile-menu-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav panel (hidden by default, toggled with JS later) -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <button class="mobile-nav-close" aria-label="Close menu">&times;</button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Support</a></li>
+      <li><a class="btn primary block" href="#signup">Get Started</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== 1. Landing / Hero (Home) ========== -->
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-left">
+          <h1 class="hero-title">Your One-Stop Personalized Career & Education Advisor</h1>
+          <p class="lead">Discover tailored career paths, compare degrees and certifications, and track the skills that unlock your next opportunity.</p>
+
+          <div class="cta-row">
+            <a href="#signup" class="btn primary">Find My Career Path</a>
+            <a href="#features" class="btn ghost">Explore Features</a>
+          </div>
+
+          <ul class="hero-features">
+            <li><i class="fa-solid fa-lightbulb"></i> AI-driven career guidance</li>
+            <li><i class="fa-solid fa-graduation-cap"></i> Course & university matching</li>
+            <li><i class="fa-solid fa-chart-line"></i> Skill tracking & progress</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <!-- using your supplied hero graphic -->
+          <img src="https://i.ibb.co/zhbwxg8X/education-career.jpg" alt="Hero illustration: career guidance" class="hero-image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. User Login / Signup (UI) ========== -->
+    <section id="signup" class="signup-section wrap">
+      <div class="signup-card">
+        <h2>Create your profile</h2>
+        <p class="muted">Sign up with email or quickly with a provider</p>
+
+        <div class="social-signup">
+          <button class="provider google"><i class="fab fa-google"></i> Continue with Google</button>
+          <button class="provider linkedin"><i class="fab fa-linkedin"></i> Continue with LinkedIn</button>
+          <button class="provider github"><i class="fab fa-github"></i> Continue with GitHub</button>
+        </div>
+
+        <div class="divider"><span>Or</span></div>
+
+        <form class="signup-form" aria-label="Signup form">
+          <div class="row">
+            <input type="text" name="fullname" placeholder="Full name" required />
+            <input type="email" name="email" placeholder="Email address" required />
+          </div>
+          <div class="row">
+            <select name="role" aria-label="Role">
+              <option value="student">Student</option>
+              <option value="professional">Professional</option>
+              <option value="educator">Educator</option>
+            </select>
+            <input type="text" name="interests" placeholder="Interests (e.g., Data Science)" />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn primary">Create Account</button>
+            <a href="#login" class="btn ghost">Login</a>
+          </div>
+        </form>
+
+        <p class="small muted">We store only necessary data and respect your privacy. You can edit your profile anytime.</p>
+      </div>
+    </section>
+
+    <!-- ========== 3. Dashboard (Personalized) ========== -->
+    <section id="dashboard" class="wrap dashboard">
+      <div class="dashboard-grid">
+        <aside class="dash-left">
+          <div class="profile-mini">
+            <img src="https://dummyimage.com/80x80/ddd/444&text=ME" alt="User avatar" />
+            <div>
+              <strong>Samira Khan</strong>
+              <small>Undergraduate — Computer Science</small>
+            </div>
+          </div>
+
+          <nav class="dash-nav">
+            <a class="active"><i class="fa-solid fa-compass"></i> Recommendations</a>
+            <a><i class="fa-solid fa-book-open"></i> Courses</a>
+            <a><i class="fa-solid fa-university"></i> Universities</a>
+            <a><i class="fa-solid fa-bell"></i> Alerts</a>
+            <a><i class="fa-solid fa-user"></i> Profile</a>
+          </nav>
+
+          <div class="stats">
+            <div><small>Progress</small><strong>62%</strong></div>
+            <div><small>Saved</small><strong>14</strong></div>
+            <div><small>Skills</small><strong>8</strong></div>
+          </div>
+        </aside>
+
+        <section class="dash-main">
+          <header class="dash-header">
+            <h3>Recommended for you</h3>
+            <div class="dash-actions">
+              <input class="search" placeholder="Search courses, universities, careers..." />
+              <button class="btn ghost"><i class="fa-solid fa-filter"></i> Filters</button>
+            </div>
+          </header>
+
+          <div class="cards-grid">
+            <!-- Recommendation card (repeatable) -->
+            <article class="card rec">
+              <div class="card-head">
+                <h4>Data Science Specialist</h4>
+                <span class="badge">High Match</span>
+              </div>
+              <p class="muted">Role matching your interests in analytics & ML. Project-based learning path — 6 months.</p>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-graduation-cap"></i> Top universities</span>
+                <span><i class="fa-solid fa-clock"></i> 6 months</span>
+                <a class="btn small primary" href="#resources">View Path</a>
+              </div>
+            </article>
+
+            <article class="card rec">
+              <div class="card-head">
+                <h4>UX Researcher</h4>
+                <span class="badge muted">Suggested</span>
+              </div>
+              <p class="muted">Career path blending psychology & design — courses, internships and mentorship.</p>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-book"></i> Courses</span>
+                <span><i class="fa-solid fa-dollar-sign"></i> Low cost options</span>
+                <a class="btn small ghost" href="#resources">Explore</a>
+              </div>
+            </article>
+
+            <article class="card rec">
+              <div class="card-head">
+                <h4>Cloud Engineer</h4>
+                <span class="badge">Trending</span>
+              </div>
+              <p class="muted">Upskill with cloud certifications and hands-on labs to move into engineering roles.</p>
+              <div class="card-meta">
+                <span><i class="fa-solid fa-award"></i> Certs</span>
+                <span><i class="fa-solid fa-laptop-code"></i> Hands-on labs</span>
+                <a class="btn small primary" href="#resources">Start Learning</a>
+              </div>
+            </article>
+          </div>
+
+        </section>
+
+        <aside class="dash-right">
+          <div class="panel">
+            <h4>Upcoming Deadlines</h4>
+            <ul class="alerts">
+              <li><strong>Oct 10</strong> — University application deadline</li>
+              <li><strong>Nov 1</strong> — Scholarship essay due</li>
+              <li><strong>Dec 15</strong> — Certification exam</li>
+            </ul>
+            <a class="btn small ghost" href="#contact">Manage Alerts</a>
+          </div>
+
+          <div class="panel">
+            <h4>Quick Stats</h4>
+            <div class="mini-stats">
+              <div><strong>3</strong><small>Saved careers</small></div>
+              <div><strong>7</strong><small>Saved courses</small></div>
+              <div><strong>2</strong><small>Applications</small></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h4>Saved Universities</h4>
+            <div class="saved-list">
+              <img src="https://dummyimage.com/40x40/eee/444&text=U1" alt="">
+              <img src="https://dummyimage.com/40x40/eee/444&text=U2" alt="">
+              <img src="https://dummyimage.com/40x40/eee/444&text=U3" alt="">
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========== 4. Search & Filter Section ========== -->
+    <section id="search-filter" class="wrap search-filter">
+      <h2>Find Courses, Universities & Careers</h2>
+      <form class="filter-form" aria-label="Search and filter">
+        <div class="f-row">
+          <input type="search" placeholder="Search by job role, course, university or skill" />
+          <select><option>Location — Worldwide</option><option>USA</option><option>UK</option></select>
+          <select><option>Field of study — All</option><option>Computer Science</option><option>Business</option></select>
+          <select><option>Budget — Any</option><option>Free</option><option>$ - Low</option><option>$$ - Medium</option></select>
+          <button class="btn primary" type="submit"><i class="fas fa-search"></i> Search</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ========== 5. Recommendation Engine UI ========== -->
+    <section id="recommend" class="wrap recommend">
+      <h2>Smart Recommendations</h2>
+      <p class="muted center">Personalized suggestions generated from your profile, learning history and career goals.</p>
+
+      <div class="recommend-grid">
+        <div class="rec-panel">
+          <h3>Suggested Careers for You</h3>
+          <ul>
+            <li>Data Scientist — Match 88% <span class="pill">AI/ML</span></li>
+            <li>Product Manager — Match 72% <span class="pill">Strategy</span></li>
+            <li>Research Analyst — Match 69% <span class="pill">Research</span></li>
+          </ul>
+          <a class="btn small primary" href="#dashboard">View full recommendations</a>
+        </div>
+        <div class="rec-panel">
+          <h3>Top Universities</h3>
+          <ul>
+            <li>Imperial College — Computer Science</li>
+            <li>University of Toronto — Data Science</li>
+            <li>National University — Research-focused scholarships</li>
+          </ul>
+          <a class="btn small ghost" href="#resources">Compare programs</a>
+        </div>
+        <div class="rec-panel">
+          <h3>Courses to Upskill</h3>
+          <ul>
+            <li>Intro to Machine Learning — 8 weeks</li>
+            <li>UX Foundations — 6 weeks</li>
+            <li>Cloud Fundamentals — 4 weeks</li>
+          </ul>
+          <a class="btn small primary" href="#resources">Start a course</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. Advisor Chatbot / Q&A ========== -->
+    <section id="chatbot" class="wrap chatbot">
+      <h2>Ask Your Advisor</h2>
+      <p class="muted">Use the assistant for quick Q&A, or book time with a human advisor.</p>
+
+      <div class="chat-wrap">
+        <div class="chat-window" aria-live="polite">
+          <div class="bot-message"><strong>Advisor</strong><p>Hi Samira — would you like course suggestions or scholarship advice today?</p></div>
+          <div class="user-message"><p>Show me short AI/ML certificates I can finish before April.</p></div>
+          <div class="bot-message"><p>I found three short certificate tracks: Intro to ML (8w), Applied ML Bootcamp (6w), Foundations of Data (4w).</p></div>
+        </div>
+
+        <form class="chat-input" aria-label="Chat input">
+          <input type="text" placeholder="Ask anything about careers, courses, applications..." />
+          <button class="btn primary"><i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== 7. Resources Section ========== -->
+    <!-- 7. Resources Section -->
+<section class="resources container">
+  <h2>Resources & Learning Library</h2>
+  <p>Guides, templates, videos and success stories to help you navigate your journey.</p>
+
+  <div class="resources-grid">
+    <!-- Resource 1 -->
+    <div class="resource-card">
+      <img src="https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg" alt="Application Checklist" class="resource-img">
+      <h3>Application Checklist</h3>
+      <p>Step-by-step guide to perfecting university and scholarship applications.</p>
+      <a href="#" class="btn secondary-btn">Download</a>
+    </div>
+
+    <!-- Resource 2 -->
+    <div class="resource-card">
+      <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg" alt="Resume Templates" class="resource-img">
+      <h3>Resume Templates</h3>
+      <p>Editable templates tailored for students and professionals.</p>
+      <a href="#" class="btn primary-btn">Get Templates</a>
+    </div>
+
+    <!-- Resource 3 -->
+    <div class="resource-card">
+      <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg" alt="Success Stories" class="resource-img">
+      <h3>Success Stories</h3>
+      <p>Read how others transitioned into high-impact careers using our platform.</p>
+      <a href="#" class="btn secondary-btn">Read</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ========== 8. Notifications / Alerts Panel (UI) ========== -->
+    <section id="alerts" class="wrap alerts">
+      <h2>Notifications & Alerts</h2>
+      <div class="alerts-grid">
+        <div class="alert-card">
+          <h4>Admissions</h4>
+          <p class="muted">Imperial College — Application due Oct 10.</p>
+        </div>
+        <div class="alert-card">
+          <h4>Jobs</h4>
+          <p class="muted">AI Intern role posted that matches your profile.</p>
+        </div>
+        <div class="alert-card">
+          <h4>Recommendations</h4>
+          <p class="muted">You should consider AI/ML micro-credentials before applying.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 9. Profile Page (Preview) ========== -->
+    <section id="profile" class="wrap profile">
+      <h2>Your Profile</h2>
+      <div class="profile-grid">
+        <div class="profile-card">
+          <h3>About</h3>
+          <p><strong>Samira Khan</strong> — BSc Computer Science | Interests: AI, Ethics, Human-Computer Interaction</p>
+          <a class="btn small ghost" href="#edit">Edit Profile</a>
+        </div>
+
+        <div class="profile-card">
+          <h3>Saved</h3>
+          <p class="muted">Careers: Data Scientist, UX Researcher</p>
+          <p class="muted">Courses: Intro to ML, UX Foundations</p>
+        </div>
+
+        <div class="profile-card">
+          <h3>Progress Tracker</h3>
+          <div class="progress">
+            <div class="bar"><span style="width:62%"></span></div>
+            <small>62% to your next milestone</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 10. Contact & Support ========== -->
+    <section id="contact" class="wrap contact">
+      <div class="contact-grid">
+        <div>
+          <h2>Contact & Support</h2>
+          <p class="muted">Need help? Browse the FAQ, start a chat with an advisor, or submit a support request.</p>
+
+          <ul class="help-list">
+            <li><i class="fa-solid fa-question-circle"></i> FAQ & Knowledge base</li>
+            <li><i class="fa-solid fa-envelope"></i> Email support — support@career-advisor.example</li>
+            <li><i class="fa-solid fa-headset"></i> Live chat & booking</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" aria-label="Contact form">
+          <input type="text" placeholder="Your name" required />
+          <input type="email" placeholder="Your email" required />
+          <select><option>Topic: General</option><option>Technical</option><option>Billing</option></select>
+          <textarea placeholder="How can we help?" rows="5"></textarea>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send Message</button>
+            <button class="btn ghost" type="reset">Reset</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="logo-block">
+        <img src="https://i.ibb.co/7L2LTK3/logo.png" alt="logo" />
+        <p class="muted">Helping learners & professionals make informed choices — skills, degrees, and careers.</p>
+        <small>© <span id="year"></span> Career & Education Advisor</small>
+      </div>
+
+      <div class="links-block">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </div>
+
+      <div class="links-block">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#contact">Help center</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="social-block">
+        <h4>Follow</h4>
+        <div class="socials">
+          <a aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Minimal inline script for UI polish (menu + year) -->
+  <script>
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle (no external js required — copyable)
+    const mobileToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileClose = document.querySelector('.mobile-nav-close');
+
+    if(mobileToggle) {
+      mobileToggle.addEventListener('click', () => {
+        mobileNav.style.display = 'block';
+        mobileNav.setAttribute('aria-hidden', 'false');
+      });
+    }
+    if(mobileClose) {
+      mobileClose.addEventListener('click', () => {
+        mobileNav.style.display = 'none';
+        mobileNav.setAttribute('aria-hidden', 'true');
+      });
+    }
+  </script>
+</body>
+</html>
