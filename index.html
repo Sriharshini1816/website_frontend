@@ -472,30 +472,33 @@
   const NODE_BACKEND = "https://nodejs-4-grgb.onrender.com";
   const PY_BACKEND = "https://career-recommender-1.onrender.com";
 
-  // Example: Fetch health check from Node backend
+  // Health check: Node backend
   fetch(`${NODE_BACKEND}/`)
     .then(res => res.json())
     .then(data => {
-      console.log("Node backend:", data);
+      console.log("Node backend health:", data);
     })
     .catch(err => console.error("Node backend error:", err));
 
-  // Example: Fetch careers from Python backend
+  // Fetch careers from Python backend and render dynamically
   fetch(`${PY_BACKEND}/careers`)
     .then(res => res.json())
     .then(data => {
       console.log("Python backend careers:", data);
-      // render careers dynamically in dashboard
-      const careersList = document.createElement("ul");
+
+      const careersContainer = document.querySelector("#recommend .rec-panel ul");
+      careersContainer.innerHTML = ""; // clear old items
+
       data.careers.forEach(career => {
         const li = document.createElement("li");
         li.textContent = career;
-        careersList.appendChild(li);
+        careersContainer.appendChild(li);
       });
-      document.querySelector("#dashboard .dash-main").appendChild(careersList);
     })
     .catch(err => console.error("Python backend error:", err));
 </script>
 
+
 </body>
 </html>
+
